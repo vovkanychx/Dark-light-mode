@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+img{
+    width: 100%;
+    display: block;
+}
+a{
+    text-decoration: none;
+}
+h2{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+.service, .about, .contact{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 30px 15px;
+}
+.link, .link span{
+    display: flex;
+    align-items: center;
+    transition: opacity 0.2s ease-in-out;
+}
+.link span{
+    margin-left: 5px;
+}
+.link:hover{
+    opacity: 0.7;
+}
+.icon svg{
+    width: 16px;
+    height: 16px;
+}
+/* Header */
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 15px;
+}
+.header a{
+    padding: 5px 0;
+}
+.header img{
+    width: 40px;
+    height: 40px;
+}
+.menu-button{
+    display: none;
+    position: relative;
+    width: 25px;
+    height: 40px;
+    cursor: pointer;
+}
+.menu-button span{
+    position: absolute;
+    width: 100%;
+    border-top: 2px solid;
+    border-radius: 2px;
+    transition: transform 0.2s ease;
+}
+.menu-button.open span{
+    border-top: 3px solid;
+}
+.menu-button span:nth-child(1){
+    top: 10px;
+}
+.menu-button span:nth-child(2){
+    top: 50%;
+    transform: translateY(-50%);
+}
+.menu-button span:nth-child(3){
+    top: calc(100% - 13px);
+}
+.menu-button.open span:nth-child(1){
+    top: calc(50% - 3px);
+    transform: rotate(405deg);
+}
+.menu-button.open span:nth-child(2){
+    display: none;
+}
+.menu-button.open span:nth-child(3){
+    top: calc(50% - 3px);
+    transform: rotate(315deg);
+}
+.navigation-list{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.navigation-list-item{
+    margin: 0 5px;
+}
+.navigation-list-item a{
+    padding: 5px;
+    transition: opacity 0.2s ease-in-out;
+}
+.navigation-list-item a:hover{
+    opacity: 0.7;
+}
+.mode-toggle{
+    width: 60px;
+    height: 30px;
+    min-width: 60px;
+    position: relative;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.mode-toggle-button{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    left: 5%;
+    top: 50%;
+    transform: translate(0, -50%);
+    transition: left 0.2s linear;
+}
+.change-position{
+    left: calc(95% - 20px);
+}
+.mode-toggle-img{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    transition: opacity 0.2s linear, width 0.2s linear, height 0.2s linear;
+}
+.sun{
+    right: 15%;
+    fill: #e1c713;
+}
+.moon{
+    left: 15%;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    fill: #1a386d;
+}
+.mode-toggle-button.change-position ~ .sun{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.mode-toggle-button.change-position ~ .moon{
+    opacity: 1;
+    width: 16px;
+    height: 16px;
+}
+/* Intro */
+.intro{
+    position: relative;
+}
+.intro img{
+    object-fit: cover;
+    object-position: center;
+    max-height: 65vh;
+}
+.intro h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 42px;
+    text-transform: uppercase;
+}
+/* Service  */
+.service-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25vw;
+    transition: transform 0.2s linear;
+}
+.service-item:nth-child(-n+4){
+    margin-bottom: 30px;
+}
+.service-item:hover{
+    transform: scale(1.1);
+}
+.service-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+.service-icon svg{
+    width: 50px;
+    height: 50px;
+}
+.service-text{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+}
+.service-price{
+    font-size: 14px;
+}
+/* About */
+.about-text{
+    text-align: justify;
+    width: 45%;
+}
+/* Contact */
+.contact-socials, .contact-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 45%
+}
+.contact-socials{
+    margin: 35px 0;
+}
+.contact .link{
+    padding: 5px 35px;
+    border-radius: 15px;
+}
+.contact label, .contact input, .contact textarea{
+    width: 100%;
+    outline: none;
+    transition: border 0.2s ease-in-out;
+    font-size: 16px;
+}
+.contact input, .contact textarea{
+    border: 0px solid transparent;
+    border-radius: 5px;
+    padding: 5px;
+    -webkit-appearance: none; /* adds box-shadow to input and textarea on chrome and safari (mobile) */
+}
+.contact input:focus, .contact textarea:focus{
+    border: 0px solid transparent;
+}
+.contact input::-webkit-input-placeholder, .contact textarea::-webkit-input-placeholder{
+    transition: color 0.2s ease-in-out
+}
+.contact input{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.contact textarea{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 5px;
+    height: 100px;
+    resize: none;
+}
+/* Footer */
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 15px;
+}
+.footer img{
+    width: 100px;
+}
+.footer p{
+    font-size: 18px;
+    margin: 10px 0;
+}
+.footer .link{
+    display: flex;
+    align-items: center;
+}
+@media (max-width: 720px) {
+    .about-text{
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 0 15px;
+    }
+}
+@media (max-width: 460px) {
+    .header{
+        flex-wrap: wrap;
+    }
+    .logo{ 
+        margin-left: 20px;
+    }
+    .menu-button{
+        display: inline-block;
+    }
+    .menu-button ~ .navigation{
+        display: none;
+    }
+    .menu-button.open ~ .navigation{
+        display: block;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        padding: 5px;
+    }
+    .service-icon{
+        width: 70px;
+        height: 70px;
+    }
+    .service-icon svg{
+        width: 30px;
+        height: 30px;
+    }
+    .service-text{
+        font-size: 20px;
+    }
+    .about-text{
+        padding: 0;
+        font-size: 14px;
+    }
+    .contact-form{
+        width: 100%;
+    }
+    .contact-socials{
+        display: none;
+    }
+}

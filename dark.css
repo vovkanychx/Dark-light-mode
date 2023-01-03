@@ -1,0 +1,94 @@
+/* colors DARK THEME (same as @media (prefers-color-scheme: dark))*/
+body.dark{
+    background-color: #121212;
+    color: #f2f2f2;
+}
+body.dark .link{
+    color: #f2f2f2;
+}
+body.dark .icon{
+    fill: #f2f2f2;
+}
+body.dark .header{
+    background-color: #121212;
+}
+body.dark .header img{
+    filter: invert(1);
+}
+body.dark .header a{
+    color: #f2f2f2;
+}
+body.dark .menu-button span{
+    border-color: #f2f2f2;
+}
+body.dark .menu-button.open ~ .navigation{
+    background-color: #222222;
+}
+body.dark .mode-toggle{
+    border: 1px solid #f2f2f2;
+    background-color: #f0f0f0;
+}
+body.dark .mode-toggle-button, body.dark .mode-toggle-img{
+    top: 50%;
+    transform: translate(0, -50%);
+}
+body.dark .sun{
+    right: 15%;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+body.dark .moon{
+    left: 15%;
+    width: 16px;
+    height: 16px;
+    opacity: 1;
+}
+body.dark .mode-toggle-button.change-position ~ .sun{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+body.dark .mode-toggle-button.change-position ~ .moon{
+    opacity: 1;
+    width: 16px;
+    height: 16px;
+}
+body.dark .intro{
+    color: #f2f2f2;
+}
+body.dark .intro img{
+    filter: grayscale(0.3);
+}
+body.dark .service-icon{
+    background-color: #222222;
+}
+body.dark .service-icon svg{
+    fill: #f2f2f2;
+}
+body.dark .about{
+    background-color: #222222;
+}
+body.dark .contact .link{
+    background-color: #222222;
+}
+body.dark .contact input, body.dark .contact textarea{
+    background-color: #3b3b3b;
+    color: #f2f2f2;
+}
+body.dark .contact input:focus::-webkit-input-placeholder, body.dark .contact textarea:focus::-webkit-input-placeholder{
+    color: #f2f2f2;
+}
+body.dark .footer{
+    background: linear-gradient(
+        to bottom,
+        #7b3d78 20%,
+        #4f1a6c 20% 40%,
+        #150833 40% 60%,
+        #100625 60% 80%,
+        #0c051c 80%
+    )
+}
+body.dark .footer .link{
+    font-weight: 400;
+}

@@ -1,0 +1,73 @@
+/* colors LIGHT THEME (same as @media (prefers-color-scheme: light))*/
+:root{
+    --bg-color: #f2f2f2;
+    --font-color: #121212;
+}
+body{
+    background-color: #f2f2f2;
+    color: #121212;
+}
+.link{
+    color: #121212;
+}
+.icon{
+    fill: #222222;
+}
+.header{
+    background-color: #f2f2f2;
+}
+.header a{
+    color: #121212;
+}
+.menu-button span{
+    border-color: #222222;
+}
+.menu-button.open ~ .navigation{
+    background-color: #e5e5e5;
+}
+.mode-toggle{
+    background-color: #e3e3e3;
+    border: 1px solid #ccc;    
+}
+.mode-toggle-button{
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+.intro img{
+    filter: brightness(2);
+}
+.service-icon{
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 20%);
+}
+.service-icon{
+    background-color: #fff;
+    fill: #222222;
+}
+.about{
+    background-color: #e5e5e5;
+}
+.contact .link{
+    background-color: #fff;
+    box-shadow: 0px 10px 20px 0px rgb(0, 0, 0, 20%);
+}
+.contact input, .contact textarea {
+    background-color: #fff;
+    box-shadow: 0px 10px 20px 0px rgb(0 0 0 / 20%);
+    color: #121212;
+}
+.contact input:focus::-webkit-input-placeholder, .contact textarea:focus::-webkit-input-placeholder{
+    color: #121212;
+}
+.footer{
+    background: linear-gradient( 
+        to bottom,
+        #ffa0ff 20%, 
+        #ff58ff 20% 40%, 
+        #b624ff 40% 60%, 
+        #641ef2 60% 80%, 
+        #4a0eca 80% 
+    );
+}
+.footer .link{
+    font-weight: 500;
+}
